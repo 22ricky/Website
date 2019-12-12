@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/index.css" rel="stylesheet" />
+  <title>Bookmarks</title>
+</head>
+<body>
+  <header>
+    <section>
+      <div>Ricky</div>
+      <input type="text">
+    </section>
+  </header>
+  <section id="app" class="main">
+    <aside>
+      <nav>
+        <template v-for="(item, index) in data.marks">
+          <a v-if="selected === item.title" class="active">{{ item.title }}</a>
+          <a v-else>{{ item.title }}</a>
+        </template>
+      </nav>
+    </aside>
+    <section class="marks">
+    </section>
+  </section>
+
+  <script src="js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          data: {},
+          selected: ''
+        }
+      },
+      created() {
+        this.getInit()
+      },
+      methods: {
+        getInit() {
+          axios.get('js/config.json').then(({ data }) => {
+            const [{ title }] = data.marks
+            this.data = data
+            this.selected = title
+          })
+        }
+      }
+    })
+  </script>
+</body>
+</html>
