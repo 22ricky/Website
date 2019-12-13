@@ -1,0 +1,55 @@
+{
+  "colors": [
+    "#ff4d4f",
+    "#ff7a45",
+    "#ffa940",
+    "#ffc53d",
+    "#ffec3d",
+    "#bae637",
+    "#73d13d",
+    "#36cfc9",
+    "#40a9ff",
+    "#597ef7",
+    "#9254de",
+    "#f759ab"
+  ],
+  "marks": [
+    {
+      "type": "frontend",
+      "menu": [
+        {
+          "title": "JavaScript",
+          "tags": [
+            "React",
+            "Vue",
+            "Angular"
+          ],
+          "children": [
+            {
+              "title": "github",
+              "desc": "github.com",
+              "url": "https://www.github.com",
+              "tag": "React"
+            }
+          ]
+        },
+        {
+          "title": "CSS",
+          "tags": [
+            "Less",
+            "Sass",
+            "CSS3"
+          ],
+          "children": [
+            {
+              "title": "github",
+              "desc": "github.com",
+              "url": "https://www.github.com",
+              "tag": "React"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

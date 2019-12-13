@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/index.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABrklEQVQ4T6WTQXLTQBBF33cV4KzipYFFzAniG8Q3QDkBOoLnBMQnGOUGvgHODcQNnBMgNlisMCtcUFFTPfY4wqliAVqoVNWa3/1f/xH/+ej0/DjahAHvzCgE00O9RtTDjtsmaNs/84fAOFppIsr4LlgJ6g6mgpFBYeJcxnUbVGeRo8CraEUnPnhBxt0mqPDv19Gmz6DZwQhYIq4GxvWXoFX611+TaKMf4pMfBGZAOYT1T5h1MEfJynnuarA9M964nSQwjnaDeC8jbIKq3PlhwFuM0nucssr/ZgGHdIWxGELlysnS3n8C2YmLHlQwPrZBs71AZVsZy03QPHd6GW1t4tJg7VBxAePelCwmO+1cygLWB+PFJODgxAXQDIzwHOpfMHmAwi0/CkSrvZtT/jpXyFOkTOzh3m+CciZcvDKYPlo4QEwHjc9t0BHauDJzYAarNqjpbey2Dbo5rnEnmuTNWHghT+Ew884PG/MsFENjclyjF3KQDKozY3EaWe+8E9Ez8iRIPc8zhCfsm48ssQdpKQelQAOj7E/05DKlTp4+T+QhgQ7RAb+A5V8v07/c7N+HvtIRss72KAAAAABJRU5ErkJggg==" type="image/x-icon">
+  <title>Bookmarks</title>
+</head>
+<body>
+  <header>
+    <section>
+      <div>Ricky</div>
+      <input type="text">
+    </section>
+  </header>
+  <section id="app" class="main">
+    <aside>
+      <div class="nav">Navigation</div>
+      <nav>
+        <template v-for="item in data.marks">
+          <template v-for="item in item.menu">
+            <a v-if="mark.title === item.title" class="active" @click="select('mark', item)">{{ item.title }}</a>
+            <a v-else @click="select('mark', item)">{{ item.title }}</a>
+          </template>
+        </template>
+      </nav>
+    </aside>
+    <section>
+      <div class="tags">
+        <template v-for="item in mark.tags">
+            <a v-if="tag === item" class="active" @click="select('tag', item)">{{ item }}</a>
+            <a v-else @click="select('tag', item)">{{ item }}</a>
+        </template>
+      </div>
+      <section class="marks">
+        <template v-for="item in data.marks">
+          <template v-for="item in item.menu">
+            <a v-for="item in item.children" :href="item.url" target="_blank" class="mark">
+              <i></i>
+              <span>
+                <span>{{ item.title }}</span>
+                <span class="desc">{{ item.desc }}</span>
+              </span>
+            </a>
+          </template>
+        </template>
+      </section>
+    </section>
+  </section>
+
+  <script src="js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          data: {},
+          mark: {},
+          tag: ''
+        }
+      },
+      created() {
+        this.getInit();
+      },
+      methods: {
+        getInit() {
+          axios.get('js/config.json').then(({ data }) => {
+            const [{ menu: [mark] }] = data.marks;
+            const { tags: [tag] } = mark;
+            this.data = data;
+            this.mark = mark;
+            this.tag = tag;
+          });
+        },
+        select(key, value) {
+          this[key] = value;
+          if (key === 'mark') {
+            const { tags: [tag] } = value;
+            this.tag = tag;
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>
