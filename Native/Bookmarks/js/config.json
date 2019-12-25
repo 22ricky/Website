@@ -15,7 +15,91 @@
   ],
   "marks": [
     {
-      "type": "frontend",
+      "type": "Huayun",
+      "menu": [
+        {
+          "title": "Company",
+          "tags": [
+            "OA",
+            "金蝶"
+          ],
+          "children": [
+            {
+              "title": "华云OA",
+              "desc": "泛微OA系统",
+              "url": "http://120.132.31.168",
+              "tag": "OA"
+            },
+            {
+              "title": "金蝶",
+              "desc": "金蝶考勤系统",
+              "url": "http://218.90.171.226:6888/shr",
+              "tag": "金蝶"
+            }
+          ]
+        },
+        {
+          "title": "Department",
+          "tags": [
+            "Process",
+            "Develop",
+            "Project"
+          ],
+          "children": [
+            {
+              "title": "Jira",
+              "desc": "jira.hdu.io",
+              "url": "10.131.1.57",
+              "tag": "Process"
+            },
+            {
+              "title": "Confluence",
+              "desc": "confluence.hdu.io",
+              "url": "10.131.1.58",
+              "tag": "Process"
+            },
+            {
+              "title": "Gitlab",
+              "desc": "gitlab.hdu.io",
+              "url": "10.131.1.56",
+              "tag": "Develop"
+            },
+            {
+              "title": "Rancher",
+              "desc": "rancher.hdu.io",
+              "url": "10.131.1.51",
+              "tag": "Develop"
+            },
+            {
+              "title": "Harbor",
+              "desc": "reg.hdu.io",
+              "url": "10.131.1.55",
+              "tag": "Develop"
+            },
+            {
+              "title": "AU前台",
+              "desc": "alpha.hdu.io",
+              "url": "10.131.1.52",
+              "tag": "Project"
+            },
+            {
+              "title": "AU后台",
+              "desc": "alpha.hdu.io/admin",
+              "url": "10.131.1.52/admin",
+              "tag": "Project"
+            },
+            {
+              "title": "流程中心",
+              "desc": "bpm.hdu.io",
+              "url": "10.131.1.52/agilebpm-ui",
+              "tag": "Project"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Frontend",
       "menu": [
         {
           "title": "JavaScript",
@@ -26,9 +110,9 @@
           ],
           "children": [
             {
-              "title": "github",
-              "desc": "github.com",
-              "url": "https://www.github.com",
+              "title": "React入门实例教程",
+              "desc": "阮一峰的网络日志",
+              "url": "http://www.ruanyifeng.com/blog/2015/03/react.html",
               "tag": "React"
             }
           ]
@@ -42,10 +126,10 @@
           ],
           "children": [
             {
-              "title": "github",
-              "desc": "github.com",
-              "url": "https://www.github.com",
-              "tag": "React"
+              "title": "CSS参考手册",
+              "desc": "Web前端开发参考手册系列",
+              "url": "http://css.doyoe.com",
+              "tag": "CSS3"
             }
           ]
         }

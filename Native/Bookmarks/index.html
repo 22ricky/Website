@@ -34,9 +34,9 @@
             <a v-else @click="select('tag', item)">{{ item }}</a>
         </template>
       </div>
-      <section class="marks">
-        <template v-for="item in data.marks">
-          <template v-for="item in item.menu">
+      <template v-for="item in data.marks">
+        <template v-for="item in item.menu">
+          <section class="marks">
             <a v-for="item in item.children" :href="item.url" target="_blank" class="mark">
               <i></i>
               <span>
@@ -44,9 +44,9 @@
                 <span class="desc">{{ item.desc }}</span>
               </span>
             </a>
-          </template>
+          </section>
         </template>
-      </section>
+      </template>
     </section>
   </section>
 

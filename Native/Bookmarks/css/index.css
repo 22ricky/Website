@@ -79,6 +79,7 @@ nav a.active {
 .mark {
   display: grid;
   grid-template-columns: 60px auto;
+  margin-bottom: 12px;
   padding: 12px;
   text-decoration: none;
   background: #ffffff;
