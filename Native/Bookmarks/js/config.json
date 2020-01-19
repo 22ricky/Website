@@ -49,49 +49,55 @@
             {
               "title": "Jira",
               "desc": "jira.hdu.io",
-              "url": "10.131.1.57",
+              "url": "http://10.131.1.57",
               "tag": "Process"
             },
             {
               "title": "Confluence",
               "desc": "confluence.hdu.io",
-              "url": "10.131.1.58",
+              "url": "http://10.131.1.58",
               "tag": "Process"
             },
             {
               "title": "Gitlab",
               "desc": "gitlab.hdu.io",
-              "url": "10.131.1.56",
+              "url": "http://10.131.1.56",
               "tag": "Develop"
             },
             {
               "title": "Rancher",
               "desc": "rancher.hdu.io",
-              "url": "10.131.1.51",
+              "url": "http://10.131.1.51",
               "tag": "Develop"
             },
             {
               "title": "Harbor",
               "desc": "reg.hdu.io",
-              "url": "10.131.1.55",
+              "url": "http://10.131.1.55",
               "tag": "Develop"
             },
             {
               "title": "AU前台",
               "desc": "alpha.hdu.io",
-              "url": "10.131.1.52",
+              "url": "http://10.131.1.52",
               "tag": "Project"
             },
             {
               "title": "AU后台",
               "desc": "alpha.hdu.io/admin",
-              "url": "10.131.1.52/admin",
+              "url": "http://10.131.1.52/admin",
+              "tag": "Project"
+            },
+            {
+              "title": "文档管理器",
+              "desc": "webfile.hdu.io",
+              "url": "http://10.131.1.50",
               "tag": "Project"
             },
             {
               "title": "流程中心",
               "desc": "bpm.hdu.io",
-              "url": "10.131.1.52/agilebpm-ui",
+              "url": "http://10.131.1.52/agilebpm-ui",
               "tag": "Project"
             }
           ]
